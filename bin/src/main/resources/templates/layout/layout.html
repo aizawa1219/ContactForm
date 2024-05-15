@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>問い合わせフォーム</title>
+		<link th:href="@{/css/style.css}" rel="stylesheet">
+ 	</head>
+	<body>
+		<div id="header">
+			<h1>
+				<a th:href="@{/ContactForm}">問い合わせフォーム</a>
+			</h1>
+		</div>
+		<div id="main">
+			<div th:if="${flash}" th:text="${flash.getMessage()}" th:class="${'alert alert-' + flash.getKey()}" role="alert"></div>
+			<div layout:fragment="content"></div>
+		</div>
+		<div id="footer">
+			<div>All rights reserved by Number One Solutions</div>
+			<div><a href="http://no1s.biz/">会社</a></div>
+		</div>
+	</body>
+</html>

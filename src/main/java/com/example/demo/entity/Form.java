@@ -54,6 +54,10 @@ public class Form {
 	@Column
 	private String comment;
 	
+	@Column(nullable = false)
+	@NotEmpty(message = "メールアドレスの入力は必須です")
+	private String mail_address;
+	
 	@Column
 	private Date updatedAt;
 
